@@ -1,4 +1,3 @@
-import Typed from "react-typed";
 import styled from "styled-components";
 import Profile from "../Assets/Image.tsx/Profile";
 
@@ -220,14 +219,7 @@ function Hero() {
       </NavContainer>
       <Main>
         <HeroText>
-          <HeroTitle>
-            <Typed
-              strings={["I'm Developer", "Javascript Enthusiastic"]}
-              typeSpeed={50}
-              backSpeed={70}
-              loop
-            />
-          </HeroTitle>
+          <HeroTitle>I'm Developer</HeroTitle>
           <HeroName>Praful Deoghare</HeroName>
           <HeroDescription>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
