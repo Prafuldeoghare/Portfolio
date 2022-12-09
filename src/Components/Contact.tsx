@@ -1,6 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import Email from "../Assets/Logo/Email";
 
 const ContactContainer = styled.div`
   width: 100%;

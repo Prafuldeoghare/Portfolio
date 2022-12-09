@@ -1,11 +1,10 @@
-import { useState } from "react";
 import styled from "styled-components";
-import Hero from "./Components/Hero";
 import AboutMe from "./Components/AboutMe";
-import Techstack from "./Components/Techstack";
-import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import Hero from "./Components/Hero";
+import Projects from "./Components/Projects";
+import Techstack from "./Components/Techstack";
 
 const MainContainer = styled.div`
   width: 100vw;

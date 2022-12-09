@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tailwind(props) {
+function Tailwind(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="120"

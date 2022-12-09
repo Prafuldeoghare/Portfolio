@@ -1,8 +1,13 @@
-import React from "react";
+import {
+  ReactElement,
+  JSXElementConstructor,
+  ReactFragment,
+  ReactPortal,
+} from "react";
 import styled from "styled-components";
 import Calender from "../../Assets/Logo/Calender";
 import Location from "../../Assets/Logo/Location";
-import Office from "../../Assets/Logo/office";
+import Office from "../../Assets/Logo/Office";
 
 interface ListviewProps {
   jobTitle: string;
@@ -11,11 +16,19 @@ interface ListviewProps {
   location: string;
   date: string;
   description?: any;
-  height?: string;
-  width?: number;
+  height: string;
+  width: number;
 }
 
-const ListWrapper = styled.div`
+interface ListWrapperProps {
+  height: string;
+}
+
+interface DisplayProps {
+  width: number;
+}
+
+const ListWrapper = styled.div<ListWrapperProps>`
   display: flex;
   flex-direction: column;
   padding-bottom: 15px;
@@ -47,7 +60,7 @@ const ListWrapper = styled.div`
   }
 `;
 
-const Display = styled.div`
+const Display = styled.div<DisplayProps>`
   display: flex;
   justify-content: space-between;
   margin-top: 4px;
@@ -150,8 +163,8 @@ function Listview({
         <ListTitle>{jobTitle}</ListTitle>
         <Badge>{status}</Badge>
       </Display>
-      <Display>
-        <Display>
+      <Display width={426}>
+        <Display width={426}>
           <IconText>
             <Office style={{ marginRight: "4px" }} />
             {officeName}
@@ -169,9 +182,21 @@ function Listview({
         </IconText>
       </Display>
       <Description>
-        {description?.map((res) => {
-          return <li style={{ marginBottom: "15px" }}>{res}</li>;
-        })}
+        {description?.map(
+          (
+            res:
+              | string
+              | number
+              | boolean
+              | ReactElement<any, string | JSXElementConstructor<any>>
+              | ReactFragment
+              | ReactPortal
+              | null
+              | undefined
+          ) => {
+            return <li style={{ marginBottom: "15px" }}>{res}</li>;
+          }
+        )}
       </Description>
     </ListWrapper>
   );

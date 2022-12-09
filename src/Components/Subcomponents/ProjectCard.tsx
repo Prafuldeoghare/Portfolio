@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Chain from "../../Assets/Logo/Chain";
 import DarkGit from "../../Assets/Logo/DarkGit";

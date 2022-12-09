@@ -1,6 +1,8 @@
 import React from "react";
 
-function Calender(props) {
+function Calender(
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       width="16"

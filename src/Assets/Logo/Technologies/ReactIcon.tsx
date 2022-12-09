@@ -1,6 +1,6 @@
 import React from "react";
 
-function ReactIcon(props) {
+function ReactIcon(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="120"

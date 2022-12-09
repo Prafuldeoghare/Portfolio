@@ -1,6 +1,6 @@
 import React from "react";
 
-function VisualStudio(props) {
+function VisualStudio(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="120"

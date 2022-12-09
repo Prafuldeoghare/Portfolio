@@ -1,6 +1,6 @@
 import React from "react";
 
-function Email(props) {
+function Email(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="751"

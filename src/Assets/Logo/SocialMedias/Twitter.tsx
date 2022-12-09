@@ -1,6 +1,8 @@
 import React from "react";
 
-function Twitter(props) {
+function Twitter(
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       width="31"

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Mui(props) {
+function Mui(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="120"

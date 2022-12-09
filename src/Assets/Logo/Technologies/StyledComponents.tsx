@@ -1,6 +1,6 @@
 import React from "react";
 
-function StyledComponents(props) {
+function StyledComponents(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="120"

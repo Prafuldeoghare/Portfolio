@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Description, Title } from "./AboutMe";
 import ProjectCard from "./Subcomponents/ProjectCard";
@@ -33,8 +32,8 @@ const Cards = styled.div`
 function Projects() {
   return (
     <TechstackContainer>
-      <Title textAlign="center">Projects</Title>
-      <Description textAlign="center">Things I’ve built so far</Description>
+      <Title>Projects</Title>
+      <Description>Things I’ve built so far</Description>
       <Cards>
         <ProjectCard />
         <ProjectCard />

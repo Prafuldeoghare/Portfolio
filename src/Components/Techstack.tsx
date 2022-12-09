@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Css from "../Assets/Logo/Technologies/Css";
 import Git from "../Assets/Logo/Technologies/Git";
@@ -80,10 +79,8 @@ const Description2 = styled.div`
 function Techstack() {
   return (
     <TechstackContainer>
-      <Title textAlign="center">Techstack</Title>
-      <Description textAlign="center">
-        Technologies I’ve been working with recently
-      </Description>
+      <Title>Techstack</Title>
+      <Description>Technologies I’ve been working with recently</Description>
       <TechDisplayContainer>
         <TechDisplay>
           <Html />

@@ -1,6 +1,8 @@
 import React from "react";
 
-function HeroLogo(props) {
+function HeroLogo(
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       width="500"

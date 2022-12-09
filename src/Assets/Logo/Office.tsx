@@ -1,6 +1,8 @@
 import React from "react";
 
-function Office(props) {
+function Office(
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       width="16"

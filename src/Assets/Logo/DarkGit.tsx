@@ -1,6 +1,8 @@
 import React from "react";
 
-function DarkGit(props) {
+function DarkGit(
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       width="20"

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Redux(props) {
+function Redux(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="120"

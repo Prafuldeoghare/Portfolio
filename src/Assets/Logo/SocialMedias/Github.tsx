@@ -1,6 +1,6 @@
 import React from "react";
 
-function Github(props) {
+function Github(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="30"

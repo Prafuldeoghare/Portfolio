@@ -1,11 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import DarkGit from "../Assets/Logo/DarkGit";
-import Name from "../Assets/Logo/Name";
-import Github from "../Assets/Logo/SocialMedias/github";
 import Linkedin from "../Assets/Logo/SocialMedias/Linkedin";
 import Twitter from "../Assets/Logo/SocialMedias/Twitter";
-import { Navs, NavList, NavTitle } from "./Hero";
+import { NavTitle } from "./Hero";
 
 const FooterContainer = styled.div`
   width: 85%;
@@ -89,7 +85,7 @@ function Footer() {
           }}
         >
           {[<Twitter />, <Linkedin />]?.map((res) => {
-            return <List isSecondaryNav={true}>{res}</List>;
+            return <List>{res}</List>;
           })}
         </div>
       </FooterMenu>
