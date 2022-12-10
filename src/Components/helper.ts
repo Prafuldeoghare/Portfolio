@@ -1,6 +1,5 @@
-export function scroll(id) {
-  const anchor = document.querySelector(`#${id}`);
-  anchor.scrollIntoView({
+export function scroll(id: string) {
+  document.querySelector(`#${id}`)?.scrollIntoView({
     behavior: "smooth",
     block: "start",
     inline: "nearest",
