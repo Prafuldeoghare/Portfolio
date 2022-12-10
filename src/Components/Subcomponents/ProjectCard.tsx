@@ -62,6 +62,8 @@ const Status = styled.div<StatusProps>`
   font-weight: 500;
   font-size: 14px;
   line-height: 26px;
+  display: flex;
+  align-items: center;
   color: ${(props) => (props?.isComplete ? "#00f5a0" : "#FFC749")};
 
   @media screen and (max-width: 1024px) {
@@ -203,6 +205,15 @@ function ProjectCard({
           >
             <Title>{title}</Title>
             <Status isComplete={isComplete}>
+              <div
+                style={{
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: `${isComplete ? "#00f5a0" : "#FFC749"}`,
+                  marginRight: "10px",
+                }}
+              ></div>
               {isComplete ? "complete" : "In progress"}
             </Status>
           </div>
