@@ -2,6 +2,10 @@ import styled from "styled-components";
 import Chain from "../../Assets/Logo/Chain";
 import DarkGit from "../../Assets/Logo/DarkGit";
 
+interface StatusProps {
+  isComplete: boolean;
+}
+
 const CardContainer = styled.div`
   width: 522px;
   height: auto;
@@ -12,16 +16,19 @@ const CardContainer = styled.div`
     width: 100%;
   }
 `;
+
 const ImageContainer = styled.img`
   width: 100%;
   height: 260px;
   object-fit: contain;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
 `;
+
 const DescriptionContainer = styled.div`
   width: 100%;
   height: auto;
   padding: 27px 28px;
+  position: relative;
   @media (max-width: 1440px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -46,6 +53,27 @@ const Title = styled.div`
 
   @media (max-width: 425px) {
     font-size: 18px;
+  }
+`;
+
+const Status = styled.div<StatusProps>`
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  color: ${(props) => (props?.isComplete ? "#00f5a0" : "#FFC749")};
+
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 12px;
   }
 `;
 
@@ -149,6 +177,7 @@ interface ProjectCardProps {
   description: string;
   preview: string;
   code: string;
+  isComplete: boolean;
 }
 
 function ProjectCard({
@@ -158,18 +187,32 @@ function ProjectCard({
   description,
   preview,
   code,
+  isComplete,
 }: ProjectCardProps) {
   return (
     <CardContainer>
       <ImageContainer src={img}></ImageContainer>
       <DescriptionContainer>
-        <Title>{title}</Title>
-        <Teches>
-          {teches?.map((res) => {
-            return <Tech>{res}</Tech>;
-          })}
-        </Teches>
-        <Description>{description}</Description>
+        <div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Title>{title}</Title>
+            <Status isComplete={isComplete}>
+              {isComplete ? "complete" : "In progress"}
+            </Status>
+          </div>
+          <Teches>
+            {teches?.map((res) => {
+              return <Tech>{res}</Tech>;
+            })}
+          </Teches>
+          <Description>{description}</Description>
+        </div>
         <Sources>
           <Source
             onClick={() => {

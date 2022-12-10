@@ -3,6 +3,8 @@ import { Description, Title } from "./AboutMe";
 import ProjectCard from "./Subcomponents/ProjectCard";
 import alphaEngineerImg from "../Assets/Image.tsx/alphaEngineer.png";
 import portfolioImg from "../Assets/Image.tsx/portfolio.png";
+import tictactoeimg from "../Assets/Image.tsx/tictactoe.png";
+import ecommerceImg from "../Assets/Image.tsx/ecommerce.png";
 
 const TechstackContainer = styled.div`
   height: auto;
@@ -46,6 +48,7 @@ function Projects() {
           }
           preview={"https://www.alphaengineerspune.com/"}
           code={""}
+          isComplete={true}
         />
         <ProjectCard
           img={portfolioImg}
@@ -56,15 +59,28 @@ function Projects() {
           }
           preview={"https://praful-deoghare-portfolio.netlify.app/"}
           code={"https://github.com/Prafuldeoghare/Portfolio"}
+          isComplete={true}
         />
-        {/* <ProjectCard
-          img={""}
-          title={""}
-          teches={[]}
-          description={""}
-          preview={""}
-          code={""}
-        /> */}
+        <ProjectCard
+          img={tictactoeimg}
+          title={"Tic Tac Toe"}
+          teches={["React"]}
+          description={"A simple Tic Tac Toe Game using react js"}
+          preview={"https://tic-tac-toe-pd.netlify.app/"}
+          code={"https://github.com/Prafuldeoghare/Tic-Tac-Toe"}
+          isComplete={true}
+        />
+        <ProjectCard
+          img={ecommerceImg}
+          title={"E Commerce"}
+          teches={["React", "Tailwind CSS", "React Redux"]}
+          description={
+            "A website that allows people to buy and sell physical goods, services, and digital products over the internet using react js"
+          }
+          preview={"https://e-commerce-pd.netlify.app/"}
+          code={"https://github.com/Prafuldeoghare/E-commerce"}
+          isComplete={false}
+        />
       </Cards>
     </TechstackContainer>
   );
