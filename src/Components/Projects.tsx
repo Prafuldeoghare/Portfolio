@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Description, Title } from "./AboutMe";
 import ProjectCard from "./Subcomponents/ProjectCard";
 import alphaEngineerImg from "../Assets/Image.tsx/alphaEngineer.png";
+import portfolioImg from "../Assets/Image.tsx/portfolio.png";
 
 const TechstackContainer = styled.div`
   height: auto;
@@ -47,21 +48,23 @@ function Projects() {
           code={""}
         />
         <ProjectCard
+          img={portfolioImg}
+          title={"Portfolio"}
+          teches={["React", "styled-components", "Typescript"]}
+          description={
+            "An online representation of work as well as skills and experiences with the technologies like react js , typescript and react-specific CSS-in-JS styled-components, "
+          }
+          preview={"https://praful-deoghare-portfolio.netlify.app/"}
+          code={"https://github.com/Prafuldeoghare/Portfolio"}
+        />
+        {/* <ProjectCard
           img={""}
           title={""}
           teches={[]}
           description={""}
           preview={""}
           code={""}
-        />
-        <ProjectCard
-          img={""}
-          title={""}
-          teches={[]}
-          description={""}
-          preview={""}
-          code={""}
-        />
+        /> */}
       </Cards>
     </TechstackContainer>
   );

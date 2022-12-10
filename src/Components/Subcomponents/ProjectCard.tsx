@@ -15,7 +15,7 @@ const CardContainer = styled.div`
 const ImageContainer = styled.img`
   width: 100%;
   height: 260px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 20px 20px 0px 0px;
 `;
 const DescriptionContainer = styled.div`
