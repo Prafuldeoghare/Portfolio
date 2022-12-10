@@ -240,9 +240,9 @@ function Hero() {
           <HeroTitle>I'm Developer</HeroTitle>
           <HeroName>Praful Deoghare</HeroName>
           <HeroDescription>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt
+            I design and develop web based components and systems. a frontend
+            developer with basic knowledge in desigining user interface and
+            develop real life interactions
           </HeroDescription>
           <HeroContact
             onClick={() => {
