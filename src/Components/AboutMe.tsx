@@ -151,15 +151,16 @@ function AboutMe() {
           width={prop}
         />
         <Listview
-          jobTitle={"Full stack developer"}
+          jobTitle={"Full stack developer Intern"}
           status={"Internship"}
           officeName={"EcoRise Software Solutions LLP"}
           location={"Pune, Maharashtra"}
           date={"Dec 2018 - Mar 2019 · 4 mos"}
           description={[
-            "Sell items to anyone, anywhere, using a single platform. Logibricks is integrated with the world's most popular marketplaces, shopping carts, and shipping partners, allowing you to operate effortlessly and effectively. created reuseable components while collaborating with backend team, UX Designer's and product manager. followed documentation to always remain up-to-speed on what needs to be updated in response to new release version. assisted with bug fixing and code reviews",
+            "Responsiblility for the design and implementation of user interfaces and UI components",
+            "Responsiblility to fix bugs in code",
           ]}
-          height={prop == 425 ? "460px" : "270px"}
+          height={prop == 425 ? "230px" : "210px"}
           width={prop}
         />
       </Wrapper>

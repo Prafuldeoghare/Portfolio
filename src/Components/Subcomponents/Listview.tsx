@@ -52,7 +52,12 @@ const ListWrapper = styled.div<ListWrapperProps>`
 
   @media (max-width: 425px) {
     width: 350px;
-    height: 110px;
+    height: 118px;
+  }
+
+  @media (max-width: 419px) {
+    width: 350px;
+    height: 130px;
   }
 
   &:hover {

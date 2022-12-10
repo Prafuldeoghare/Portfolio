@@ -40,7 +40,7 @@ const Query = styled.div`
 
 function Contact() {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <Query>For any questions please mail us:</Query>
       <Query>prafuldeoghare@gmail.com</Query>
     </ContactContainer>

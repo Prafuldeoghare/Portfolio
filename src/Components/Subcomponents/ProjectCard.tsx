@@ -9,10 +9,10 @@ const CardContainer = styled.div`
   background: #222525;
 
   @media (max-width: 425px) {
-    width: 400px;
+    width: 100%;
   }
 `;
-const ImageContainer = styled.div`
+const ImageContainer = styled.img`
   width: 100%;
   height: 260px;
   object-fit: cover;
@@ -121,6 +121,10 @@ const Source = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 48px;
+  cursor: pointer;
+  @media (max-width: 425px) {
+    margin-right: 24px;
+  }
 `;
 
 const SourceTitle = styled.a`
@@ -138,29 +142,48 @@ const SourceTitle = styled.a`
   }
 `;
 
-function ProjectCard() {
+interface ProjectCardProps {
+  img: any;
+  title: string;
+  teches: Array<string>;
+  description: string;
+  preview: string;
+  code: string;
+}
+
+function ProjectCard({
+  img,
+  teches,
+  title,
+  description,
+  preview,
+  code,
+}: ProjectCardProps) {
   return (
     <CardContainer>
-      <ImageContainer>
-        <img src="" />
-      </ImageContainer>
+      <ImageContainer src={img}></ImageContainer>
       <DescriptionContainer>
-        <Title>Project Tile goes here</Title>
+        <Title>{title}</Title>
         <Teches>
-          <Tech>HTML</Tech> <Tech>JavaScript</Tech> <Tech>SASS</Tech>
-          <Tech>React</Tech>
+          {teches?.map((res) => {
+            return <Tech>{res}</Tech>;
+          })}
         </Teches>
-        <Description>
-          This is sample project description random things are here in
-          description This is sample project lorem ipsum generator for dummy
-          content
-        </Description>
+        <Description>{description}</Description>
         <Sources>
-          <Source>
+          <Source
+            onClick={() => {
+              window.open(preview);
+            }}
+          >
             <Chain />
             <SourceTitle>Live Preview</SourceTitle>
           </Source>
-          <Source>
+          <Source
+            onClick={() => {
+              window.open(code);
+            }}
+          >
             <DarkGit />
             <SourceTitle>View Code</SourceTitle>
           </Source>

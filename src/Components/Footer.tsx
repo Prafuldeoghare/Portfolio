@@ -13,10 +13,13 @@ const FooterContainer = styled.div`
   padding-top: 150px;
 
   @media screen and (max-width: 1024px) {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
   }
 
   @media (max-width: 425px) {
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 20px;
     line-height: 21px;
   }
@@ -33,6 +36,10 @@ const FooterMenu = styled.div`
   margin-top: 8px;
   flex-direction: column;
   align-items: flex-start;
+
+  @media screen and (max-width: 425px) {
+    margin-top: 20px;
+  }
 `;
 
 const Phone = styled.a`

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Profile from "../Assets/Image.tsx/Profile";
+import { scroll } from "./helper";
 
 const HeroContainer = styled.div`
   width: 85%;
@@ -119,6 +120,11 @@ export const NavTitle = styled.div`
     font-size: 18px;
     line-height: 25px;
   }
+
+  @media (max-width: 375px) {
+    font-size: 16px;
+    line-height: 25px;
+  }
 `;
 
 const HeroTitle = styled.div`
@@ -212,8 +218,20 @@ function Hero() {
         </NavTitle>
         <Navbar>
           <Navs>
-            <NavList>Projects</NavList>
-            <ContactNav>Contact</ContactNav>
+            <NavList
+              onClick={() => {
+                scroll("projects");
+              }}
+            >
+              Projects
+            </NavList>
+            <ContactNav
+              onClick={() => {
+                scroll("contact");
+              }}
+            >
+              Contact
+            </ContactNav>
           </Navs>
         </Navbar>
       </NavContainer>
@@ -226,7 +244,13 @@ function Hero() {
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt
           </HeroDescription>
-          <HeroContact>Contact Me</HeroContact>
+          <HeroContact
+            onClick={() => {
+              scroll("contact");
+            }}
+          >
+            Contact Me
+          </HeroContact>
         </HeroText>
         <Image>
           <Profile />
